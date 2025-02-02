@@ -1,7 +1,9 @@
+// Inclusão de bibliotecas
 #include <stdio.h>
-#include "pico/stdlib.h"   // Inclui a biblioteca padrão para funcionalidades básicas como GPIO, temporização e comunicação serial.
-#include "hardware/timer.h" // Inclui a biblioteca para gerenciamento de temporizadores de hardware.
+#include "pico/stdlib.h"   
+#include "hardware/timer.h" 
 
+//Definição dos pinos e inicialização de iterador
 #define LED_RED 13
 #define LED_GREEN 11
 #define LED_BLUE 12
@@ -39,7 +41,7 @@ int main() {
     // Inicializa a comunicação serial, permitindo o uso de funções como printf.
     stdio_init_all();
 
-    // Inicializar o pino GPIO11
+    // Inicializar os pinos dos leds
     gpio_init(LED_RED);
     gpio_set_dir(LED_RED,true);
     gpio_init(LED_GREEN);
